@@ -6,8 +6,8 @@ var CookiesManager = {
 
 	init: function() {
 		self = this;
-		self.runRepeatCheck();
-		// self.deleteCookies();
+		// self.runRepeatCheck();
+		self.deleteCookies();
 	},
 
 	//
@@ -18,7 +18,7 @@ var CookiesManager = {
             console.log("no raffled flag");
 
             // test
-            self.setFirstCookies();
+            // self.setFirstCookies();
         } else {
             //
             self.isRaffled = true;

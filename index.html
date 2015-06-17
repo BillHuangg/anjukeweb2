@@ -9,19 +9,66 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <link rel="stylesheet" href="css/lib/foundation/foundation.css">
-  <!-- <link rel="stylesheet" href="css/lib/foundation/normalize.css"> -->
+  <link rel="stylesheet" href="css/lib/foundation/normalize.css">
   <link rel="stylesheet" href="css/index.css">
 
 </head>
 <body>
-  <div id="main-content-container">
-    <h1>Anjuke</h1>
+  <div class="ajk-page" id="blur-bg">
+  </div>
+  <div class="ajk-page" id="home-page-container">
+    <div class="clearfix" id="home-page-title-container">
+      <img id="home-page-title" src="src/homepage-title.png">
+    </div>
+    <div class="text-center" id="home-button-container">
+      <img id="home-button" src="src/home-button.png">
+    </div>
+  </div>
+
+  <div class="ajk-page" id="question-page-container">
+    <div class="clearfix text-center" id="question-container">
+      <ul class='small-block-grid-1' id="question-lists">
+        <li class="question-li">
+          <div>
+            <h4 class="question-content text-center" id='question'>1. 你买房了吗</h4>
+          </div>
+        </li>
+        <li data-role="0" class="answer-li">
+          <div class="clearfix">
+            <h4 class="answer-number">A:</h4>
+            <h4 class="text-left answer-content" id='answer-1'>没有看到符合我气质的房子</h4>
+          </div>
+        </li>
+        <li data-role="1" class="answer-li">
+          <div class="clearfix">
+            <h4 class="answer-number">B:</h4>
+            <h4 class="text-left answer-content" id='answer-2'>已买上瘾，别拦我！</h4>
+          </div>
+        </li>
+        <li data-role="2" class="answer-li">
+          <div class="clearfix">
+            <h4 class="answer-number">C:</h4>
+            <h4 class="text-left answer-content" id='answer-3'>贷款中</h4>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="ajk-page" id="type-page-container">
+    <div class="text-center" id='radar-canvas-container'>
+      <canvas id="radar-canvas"></canvas>
+    </div>
   </div>
 
   <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
   <script src="js/lib/jquery/jquery.js"></script>
   <script src="js/lib/jquery/jquery.cookie.js"></script>
+  <script src="js/lib/Chart.js"></script>
+
   <script src="js/CookiesManager.js"></script>
+  <script src="js/QuestionManager.js"></script>
   <script src="js/index.js"></script>
   <script src="js/lib/foundation/foundation.min.js"></script>
   <script src="js/lib/foundation/foundation/foundation.slider.js"></script>
