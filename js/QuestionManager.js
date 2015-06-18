@@ -1,7 +1,10 @@
 var QuestionManager = {
     currentQuestionIndex: -1,
+
+    // final score
     totalScore: 0,
-    // Type: z h s j y
+    // type: z h s j y
+    // type score
     typeScoreList: [0, 0, 0, 0, 0],
 
     questionList: [
@@ -30,15 +33,14 @@ var QuestionManager = {
         [{'content': '买！买！买！', 'score': 2}, {'content': '租！租！租！', 'score': 1}, {'content': '我就是来拿安居客的红包的', 'score': 0}]
     ],
 
-	self: null,
-
 	init: function() {
-		self = this;
+		var self = this;
         self.currentQuestionIndex = 0;
 	},
 
     showQuestionAtIndex: function(index) {
-        self = this;
+        var self = this;
+
         $('#question').text(self.questionList[index]['content']);
 
         $('#answer-1').text(self.answersList[index][0]['content']);
@@ -67,8 +69,7 @@ var QuestionManager = {
     },
 
     answerButtonEvent: function(buttonIndex) {
-        self = this;
-        // buttonIndex = Number(buttonIndex);
+        var self = this;
 
         var tempScore = self.answersList[self.currentQuestionIndex][buttonIndex]['score'];
         self.totalScore += tempScore;
@@ -78,9 +79,27 @@ var QuestionManager = {
             self.currentQuestionIndex++;
             self.showQuestionAtIndex(self.currentQuestionIndex)
         } else if(self.currentQuestionIndex == 9) {
+
+            // all question done
             self.currentQuestionIndex = -999;
         }
     },
 
+    getScoreAdvice: function() {
+        var self = this;
+
+        if(self.totalScore >= 17 && self.totalScore <= 20) {
+            return '安居客的首页的房产<br>都拿下吧';
+        } else if(self.totalScore >= 13 && self.totalScore <= 16) {
+            return '建议您逛逛安居客<br>商业地产等着您';
+        } else if(self.totalScore >= 9 && self.totalScore <= 12) {
+            return '建议您经常使用安居客<br>看房团正等着你！';
+        } else if(self.totalScore >= 5 && self.totalScore <= 8) {
+            return '建议您搬去深山郊外<br>放松身心';
+        } else if(self.totalScore >= 0 && self.totalScore <= 4) {
+            return '建议您搬回家住<br>来日方长';
+        }
+
+    }
 
 };

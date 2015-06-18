@@ -16,6 +16,7 @@
 <body>
   <div class="ajk-page" id="blur-bg">
   </div>
+
   <div class="ajk-page" id="home-page-container">
     <div class="clearfix" id="home-page-title-container">
       <img id="home-page-title" src="src/homepage-title.png">
@@ -57,22 +58,95 @@
   </div>
 
   <div class="ajk-page" id="type-page-container">
+    <div class="text-center" id="type-page-title-container">
+      <img id="type-page-title" src="src/type-page-title.png">
+    </div>
+
+    <div class="text-center" id="type-page-score-container">
+      <h3 id="type-page-score">您的适居指数为 </h3>
+    </div>
+
     <div class="text-center" id='radar-canvas-container'>
       <canvas id="radar-canvas"></canvas>
     </div>
+
+    <div class="text-center" id='type-page-advice-container'>
+      <h1 id="type-page-advice"></h1>
+    </div>
+
+    <div class="text-center" id="type-page-button-conatiner">
+      <button id="type-page-button">点击抽奖</button>
+    </div>
   </div>
 
-  <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+  <div class="ajk-page" id="alreadyraffled-page-container">
+    <div class="text-center" id="alreadyraffled-page-title-container">
+      <h1>您已抽过奖了哦</h1>
+    </div>
+    <div class="text-center" id="alreadyraffled-button-container">
+      <img id="alreadyraffled-button" src="src/home-button.png">
+    </div>
+  </div>
+
+  <div class="ajk-page" id="rafflenothing-page-container">
+    <div class="text-center" id="rafflenothing-page-result-container">
+      <div class="text-center">
+        <h1>00</h1>
+      </div>
+    </div>
+
+    <div class="text-center" id="rafflenothing-page-text-container">
+      <h2 id="rafflenothing-page-text-1">非常遗憾您未中奖<br>谢谢您的参与！</h2>
+      <h2 id="rafflenothing-page-text-2">关注安居客<br>更多后续活动及丰厚大奖<br>等着你哦！</h2>
+    </div>
+
+    <div class="text-center" id="rafflenothing-page-button-conatiner">
+      <button id="rafflenothing-page-button">确定</button>
+    </div>
+  </div>
+
+  <div class="ajk-page" id="rafflething-page-container">
+    <div class="text-center" id="rafflething-page-result-container">
+      <div class="text-center">
+        <h1></h1>
+      </div>
+    </div>
+
+    <div class="text-center" id="rafflething-page-text-container">
+      <h1 id="rafflething-page-text-1"></h1>
+      <h4 id="rafflething-page-text-2">填写以下信息<br>小安会在一周内给你充话费哦！</h4>
+    </div>
+
+    <div class="text-center" id="rafflething-page-input-conatiner">
+      <input id="rafflething-page-input" type="text" name="phone-num" />
+    </div>
+
+    <div class="text-center" id="rafflething-page-button-conatiner">
+      <button id="rafflething-page-button">确定</button>
+    </div>
+  </div>
+
+  <div class="ajk-page" id="rafflefinished-page-container">
+    
+  </div>
+
+  <div class="ajk-page" id="share-page-container">
+    分享
+  </div>
+
+  <div class="ajk-page" id="contact-page-container">
+    关注
+  </div>
+
   <script src="js/lib/jquery/jquery.js"></script>
   <script src="js/lib/jquery/jquery.cookie.js"></script>
   <script src="js/lib/Chart.js"></script>
+  <script src="js/lib/foundation/foundation.min.js"></script>
 
   <script src="js/CookiesManager.js"></script>
+  <script src="js/RaffleManager.js"></script>
   <script src="js/QuestionManager.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/lib/foundation/foundation.min.js"></script>
-  <script src="js/lib/foundation/foundation/foundation.slider.js"></script>
-
 </body>
 </html>
 

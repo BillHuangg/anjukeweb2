@@ -2,17 +2,18 @@ var CookiesManager = {
 
 	cookiesKey: "raffled_flag",
 	isRaffled: false,
-	self: null,
 
 	init: function() {
-		self = this;
+		var self = this;
 		// self.runRepeatCheck();
+
+        // test
 		self.deleteCookies();
 	},
 
 	//
     runRepeatCheck : function() {
-    	self = this;
+    	var self = this;
         if (!self.checkCookies()) {
             self.isRaffled = false;
             console.log("no raffled flag");
@@ -29,7 +30,7 @@ var CookiesManager = {
     // set cookies
     // it will be called after server get phone number
     setFirstCookies : function() {
-    	self = this;
+    	var self = this;
     	var cookiesValue = "raffled";
         $.cookie(self.cookiesKey, cookiesValue);
     	console.log("set flag for raffled: " + cookiesValue);
@@ -38,7 +39,7 @@ var CookiesManager = {
 
     // check cookies
     checkCookies : function() {
-    	self = this;
+    	var self = this;
    		var cookiesValue =  $.cookie(self.cookiesKey);
 	    if(cookiesValue != undefined) {
 	        // already have session
@@ -50,7 +51,7 @@ var CookiesManager = {
     },
 
     deleteCookies : function() {
-    	self = this;
+    	var self = this;
     	$.cookie(self.cookiesKey, '', { expires: -1 });
 		console.log("delete cookies");
     }

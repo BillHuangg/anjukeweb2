@@ -3,6 +3,10 @@ html {
 
 }
 
+h1, h2, h3, h4, h5, h6 {
+	color: white;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -51,7 +55,7 @@ body {
 }
 
 #home-button {
-	width: 12%;
+	width: 13%;
 }
 
 /******************** question page ********************/
@@ -117,10 +121,171 @@ body {
 
 /******************** type page ********************/
 
+#type-page-title-container {
+	margin-top: 12%;
+	margin-bottom: 2%;
+}
+
+#type-page-title {
+
+	width: 90%;
+}
+
+#type-page-score-container {
+	margin-bottom: 6%;
+}
+
+#type-page-score-container h3 {
+	color: white;
+}
+
 #radar-canvas {
 	width: 100% !important;
 	height: 100% !important;
 }
+
+#type-page-advice-container {
+	background-color: rgba(255,255,255,0.25);
+	margin-top: 6%;
+	margin-bottom: 8%;
+
+	padding: 2% 0;
+}
+
+#type-page-advice {
+	color: white;
+	margin: 0;
+}
+
+#type-page-button {
+	background-color: rgba(255,255,255,0.25);
+	border-radius: 0.8em;
+	font-size: 1.2em;
+}
+
+/******************** already raffle page ********************/
+
+#alreadyraffled-page-title-container {
+	margin-top: 56%;
+	margin-bottom: 16%;
+}
+
+#alreadyraffled-page-title-container h1 {
+	color: white;
+
+}
+
+#alreadyraffled-button {
+	width: 13%;
+}
+
+/******************** raffle nothing page ********************/
+
+#rafflenothing-page-result-container {
+	margin-top: 14%;
+	margin-bottom: 8%;
+}
+
+#rafflenothing-page-result-container div {
+	border: 2px solid rgba(255,255,255,0.6);
+	border-radius: 0.8em;
+
+	width: 64%;
+	margin-left: 18%;
+}
+
+#rafflenothing-page-result-container div h1{
+	/*float: left;*/
+	color: white;
+	font-size: 8em;
+	margin: 0;
+	padding: 0;
+}
+
+#rafflenothing-page-text-container {
+
+}
+
+#rafflenothing-page-text-container h2 {
+	color: white;
+	font-size: 1.5em;
+	padding: 1% 0;
+}
+
+#rafflenothing-page-button-conatiner {
+	margin-top: 15%;
+}
+
+#rafflenothing-page-button {
+	background-color: rgba(255,255,255,0.25);
+	border-radius: 0.8em;
+	font-size: 1em;
+
+	padding: 2% 8%;
+}
+
+/******************** raffle thing page ********************/
+
+#rafflething-page-result-container {
+	margin-top: 14%;
+	margin-bottom: 8%;
+}
+
+#rafflething-page-result-container div {
+	border: 2px solid rgba(255,255,255,0.6);
+	border-radius: 0.8em;
+
+	width: 64%;
+	margin-left: 18%;
+}
+
+#rafflething-page-result-container div h1{
+	color: white;
+	font-size: 8em;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+#rafflething-page-button {
+	background-color: rgba(255,255,255,0.25);
+	border-radius: 0.8em;
+	font-size: 1em;
+
+	padding: 2% 8%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
