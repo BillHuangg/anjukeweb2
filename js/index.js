@@ -8,10 +8,11 @@ jQuery(document).ready(function ($) {
     RaffleManager.init();
     QuestionManager.init();
 
-
+    /********************* Init Function *********************/
     function UIInit() {
-        //$('#home-page-container').show();
-        showRaffleThingPage();
+        $('#home-page-container').show();
+        // showRaffleThingPage();
+        // showRaffleFinishedPage();
         // showRaffleNothingPage();
         // showAlreadyRaffledPage();
         // $('#type-page-container').show();        
@@ -36,34 +37,35 @@ jQuery(document).ready(function ($) {
 
         $('#type-page-button').click(function() {
             // raffle page
-            if(CookiesManager.isRaffled) {
-                console.log('already raffle');
-                showAlreadyRaffledPage();
-            } else {
-
-                // send raffle request
-                console.log('send raffle request');
-
-                RaffleManager.sendRaffleRequest(showRaffleNothingPage, showRaffleThingPage, showRaffleFinishedPage);
-                // // nothing
-                // showRaffleNothingPage();
-
-                // // thing
-                // showRaffleThingPage();
-
-                // // finished
-                // showRaffleFinishedPage();
-            }
+            console.log('send raffle request');
+            RaffleManager.sendRaffleRequest(showAlreadyRaffledPage, showRaffleNothingPage, showRaffleThingPage, showRaffleFinishedPage);
         });
 
         $('#alreadyraffled-button').click(function() {
             showContactPage();
         });
 
+        $('#rafflefinished-button').click(function() {
+            showContactPage();
+        });
+
         $('#rafflenothing-page-button').click(function() {
             showSharePage();
         });
+
+        $('#rafflething-page-button').click(function() {
+            var phoneNum = $('#rafflething-page-input').val();
+
+            if(verifyPhoneNumber(phoneNum)) {
+                RaffleManager.userPhoneNumber = phoneNum;
+                showSharePage();
+            } else {
+                // wait for correct input
+            } 
+        });
     }
+
+    /********************* UI Page Function *********************/
 
     function showQuestionPage() {
         console.log('questions page');
@@ -125,6 +127,10 @@ jQuery(document).ready(function ($) {
         // raffle finished
         console.log('raffle finished page');
 
+        $('.ajk-page').hide();
+        $('#blur-bg').show();
+        $('#rafflefinished-page-container').show();
+
         
     }
 
@@ -142,6 +148,26 @@ jQuery(document).ready(function ($) {
         $('.ajk-page').hide();
         $('#blur-bg').show();
         $('#contact-page-container').show();
+    }
+
+
+
+
+    /********************* Utility Function *********************/
+
+    function verifyPhoneNumber(value) {
+        if(value == "" || value == undefined) {
+            alert("手机号码不能为空");
+            return false;
+        } else {
+            // check all number
+            if(isNaN(value)) {
+                alert("输入错误，只能输入手机号码哦");
+                return false;
+            } else {
+                return true;
+            }
+        }
     }
 
     function updateTypePageUI() {

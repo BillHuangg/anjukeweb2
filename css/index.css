@@ -167,7 +167,7 @@ body {
 
 #alreadyraffled-page-title-container {
 	margin-top: 56%;
-	margin-bottom: 16%;
+	/*margin-bottom: 16%;*/
 }
 
 #alreadyraffled-page-title-container h1 {
@@ -177,6 +177,10 @@ body {
 
 #alreadyraffled-button {
 	width: 13%;
+	position: absolute;
+	left: 50%;
+	top: 54%;
+	margin-left: -6.5%;
 }
 
 /******************** raffle nothing page ********************/
@@ -246,13 +250,37 @@ body {
 	padding: 0;
 }
 
+#rafflething-page-input-container {
+	margin-bottom: 10%;
+}
 
+#rafflething-page-input-container div{
+	margin-left: 10%;
+	margin-top: 10%;
+	/*width: 50%;*/
+}
 
+#rafflething-page-input-container div label{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 1%;
+	/*width: 50%;*/
+	float: left;
+	color: white;
+	font-size: 1.2em;
+	/*line-height: 10%;*/
+}
 
-
-
-
-
+#rafflething-page-input {
+	float: left;
+	width: 50%;
+	background-color: rgba(255,255,255,0.6);
+	color: white;
+	font-size: 1.2em;
+	height: 10%;
+	padding-left: 7%;
+	border-radius: 0.3em;
+}
 
 #rafflething-page-button {
 	background-color: rgba(255,255,255,0.25);
@@ -262,8 +290,26 @@ body {
 	padding: 2% 8%;
 }
 
+/******************** raffle finished page ********************/
+
+#rafflefinished-page-title-container {
+	margin-top: 40%;
+	/*margin-bottom: 16%;*/
+}
+
+#rafflefinished-page-title-container h1 {
+	color: white;
+
+}
 
 
+#rafflefinished-button {
+	width: 13%;
+	position: absolute;
+	left: 50%;
+	top: 54%;
+	margin-left: -6.5%;
+}
 
 
 
