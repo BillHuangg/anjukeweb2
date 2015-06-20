@@ -5,19 +5,24 @@ jQuery(document).ready(function ($) {
     UIInit();
     buttonEventInit();
 
+    ServiceHelper.sendReportOnReady(null, null);
     RaffleManager.init();
     QuestionManager.init();
 
     /********************* Init Function *********************/
     function UIInit() {
         $('#home-page-container').show();
+
+        // test page
+        // showTypePage();
+        // showContactPage();
         // showRaffleThingPage();
         // showRaffleFinishedPage();
         // showRaffleNothingPage();
         // showAlreadyRaffledPage();
-        // $('#type-page-container').show();        
-        // drawRadar();
+        // showSharePage();
     }
+
     // page navigation event
     function buttonEventInit() {
 
@@ -58,10 +63,15 @@ jQuery(document).ready(function ($) {
 
             if(verifyPhoneNumber(phoneNum)) {
                 RaffleManager.userPhoneNumber = phoneNum;
+                RaffleManager.sendResult();
                 showSharePage();
             } else {
                 // wait for correct input
             } 
+        });
+
+        $('#share-next-button').click(function() {
+            showContactPage();
         });
     }
 
@@ -73,8 +83,10 @@ jQuery(document).ready(function ($) {
         // questions page
         $('#home-page-container').hide();
 
+        $('body').css('background-image','url(../src/bg-blur.jpg)');
+
         //change bg to blur
-        $('#blur-bg').show();
+        // $('#blur-bg').show();
 
         // show questions part
         QuestionManager.showQuestionAtIndex(0);
@@ -88,7 +100,7 @@ jQuery(document).ready(function ($) {
         updateTypePageUI();
         $('#question-page-container').hide();
         $('#type-page-container').show();
-        drawRadar();
+        drawRadar($("#radar-canvas").get(0).getContext('2d'));
         // for(var i = 0; i < 5; i++) {
         //     console.log(QuestionManager.typeScoreList[i]);
         // }
@@ -105,7 +117,7 @@ jQuery(document).ready(function ($) {
         // raffle nothing
         console.log('raffle nothing page');
         $('.ajk-page').hide();
-        $('#blur-bg').show();
+        // $('#blur-bg').show();
         $('#rafflenothing-page-container').show();
     }
 
@@ -119,7 +131,7 @@ jQuery(document).ready(function ($) {
         $('#rafflething-page-text-1').text('恭喜您获得' + resultValue + '元话费');
 
         $('.ajk-page').hide();
-        $('#blur-bg').show();
+        // $('#blur-bg').show();
         $('#rafflething-page-container').show();
     }
 
@@ -128,30 +140,29 @@ jQuery(document).ready(function ($) {
         console.log('raffle finished page');
 
         $('.ajk-page').hide();
-        $('#blur-bg').show();
+        // $('#blur-bg').show();
         $('#rafflefinished-page-container').show();
-
-        
     }
 
     function showSharePage() {
         console.log('raffle share page');
 
+
+        updateSharePageUI();
         $('.ajk-page').hide();
-        $('#blur-bg').show();
+        // $('#blur-bg').show();
         $('#share-page-container').show();
+
+        drawRadar($("#share-radar-canvas").get(0).getContext('2d'));
     }
 
     function showContactPage() {
         console.log('raffle contact page');
 
         $('.ajk-page').hide();
-        $('#blur-bg').show();
+        // $('#blur-bg').show();
         $('#contact-page-container').show();
     }
-
-
-
 
     /********************* Utility Function *********************/
 
@@ -175,7 +186,18 @@ jQuery(document).ready(function ($) {
         $('#type-page-advice').html(QuestionManager.getScoreAdvice());
     }
     
-    function drawRadar() {
+    function updateSharePageUI() {
+        $('#share-page-title').text('恭喜您获得' + RaffleManager.raffleResultValue + '元话费');
+        $('#share-page-score').html('您的适居指数为 ' + QuestionManager.totalScore);
+        $('#share-page-advice').html(QuestionManager.getScoreAdvice());
+
+        // set for share content
+        document.title = '我是' + QuestionManager.getCharacterType() + '，适居指数' + QuestionManager.totalScore + '，抽到' +  RaffleManager.raffleResultValue + '元话费。你也来测测你的购房十年吧！';
+    }
+
+    function drawRadar(ctx) {
+
+
         var data = {
             labels : ['住房指数', '环境指数', '生存指数', '健康指数', '压力指数'],
             datasets : [
@@ -184,20 +206,37 @@ jQuery(document).ready(function ($) {
                     strokeColor : "rgba(255,255,255,0)",
                     pointColor : "rgba(255,255,255,0)",
                     pointStrokeColor : "rgba(255,255,255,0)",
+                    // data : [2,2,1,4,3]
                     data : QuestionManager.typeScoreList
+                },
+                {
+                    // this dataset just for ui setting
+                    fillColor : "rgba(255,255,255,0)",
+                    strokeColor : "rgba(255,255,255,0)",
+                    pointColor : "rgba(255,255,255,1)",
+                    pointStrokeColor : "rgba(255,255,255,1)",
+                    data : [4,4,4,4,4]
+                    // data : QuestionManager.typeScoreList
                 }
             ]
         };
 
-        var ctx = $("#radar-canvas").get(0).getContext('2d');
+        // var ctx1 = $("#radar-canvas").get(0).getContext('2d');
+        // var ctx2 = $("#share-radar-canvas").get(0).getContext('2d');
         var option = {
             scaleLineColor : "rgba(255,255,255,1)",
-            scaleFontColor : "rgba(255,255,255,1)",
             angleLineColor : "rgba(255,255,255,1)",
-            // scaleShowLine : true,
-            // datasetFill : false,
+            scaleFontColor: "rgba(0,0,0,0)",
+            scaleOverride: true,
+            scaleSteps: 1,
+            scaleStepWidth: 4,
+            scaleStartValue: 0,
+            responsive: true,
+            maintainAspectRatio: true,
+            animation: false,
+            showTooltips: false,
         }
 
-        var radarChart = new Chart(ctx).Radar(data, option);
+        var radarChart1 = new Chart(ctx).Radar(data, option);
     }
 });

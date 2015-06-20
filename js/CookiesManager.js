@@ -5,10 +5,11 @@ var CookiesManager = {
 
 	init: function() {
 		var self = this;
-		// self.runRepeatCheck();
-
+	
         // test
 		self.deleteCookies();
+
+        self.runRepeatCheck();
 	},
 
 	//

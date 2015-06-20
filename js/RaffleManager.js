@@ -1,16 +1,13 @@
 var RaffleManager = {
 
-	self : null,
-	reqURL : '',
-	
 	raffleAlreadyCallback : null,
 	raffleNothingCallback : null,
 	raffleThingCallback : null,
 	raffleFinishedCallback : null,
 
-	userPhoneNumber : null,
+	userPhoneNumber : "",
 	// test
-	raffleResultValue : 50,
+	raffleResultValue : "",
 
 	init : function() {
 		// cookies manger for whether raffled
@@ -29,34 +26,49 @@ var RaffleManager = {
 
 		if(CookiesManager.isRaffled) {
             console.log('already raffle');
-            showAlreadyRaffledPage();
+            self.raffleAlreadyCallback();
         } else {
         	// send raffle request
-			var jsonData;
-			
-			/*
-			$.ajax({
-				url: self.reqURL,
-			    type:'post', 
-			    data: jsonData,   
-	    		cache: true,    
-	    		dataType: 'json', 
-	    		async: true,
-			    success: function(data, textStatus) {
-			    	console.log('send request for raffle success');
-			    	// call callback function based on raffle status in data
-
-			    },
-
-			    error: function(XMLHttpRequest, textStatus, errorThrown) {    
-		         	console.log('send request for raffle error');
-		    	}
-			});
-			*/
-			self.raffleFinishedCallback();
-			// self.raffleAlreadyCallback();
-			// self.raffleNothingCallback();
+			ServiceHelper.sendRaffleRequest(self.raffleRequestSuccessCallback, self.raffleRequestErrorCallback);
 		}
+	},
+
+	raffleRequestSuccessCallback : function(data) {
+		var self = RaffleManager;
+
+		console.log("raffle success: " + data);
+		self.raffleResultValue = data;
+		// -1 -> finished
+		// 0 -> 0
+		// ...
+		if(data == "-1") {
+			self.raffleFinishedCallback();
+			self.sendResult();
+		} else if(data == "0") {
+			self.raffleNothingCallback();
+			self.sendResult();
+		} else {
+			self.raffleThingCallback();
+		}
+
+		// set already raffle cookies
+		CookiesManager.setFirstCookies();
+
+		
+	},
+
+	raffleRequestErrorCallback : function(data) {
+		console.log("raffle error: " + data);
+	},
+
+
+	sendResult : function() {
+		var self = this;
+		// send result
+		// score|raffletype|phonenumber
+		var resultData = QuestionManager.totalScore + "|" + self.raffleResultValue + "|" + self.userPhoneNumber;
+		ServiceHelper.sendResult(resultData, null, null);
+		
 	}
 
 }

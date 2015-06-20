@@ -14,137 +14,170 @@
 
 </head>
 <body>
-  <div class="ajk-page" id="blur-bg">
-  </div>
-
-  <div class="ajk-page" id="home-page-container">
-    <div class="clearfix" id="home-page-title-container">
-      <img id="home-page-title" src="src/homepage-title.png">
-    </div>
-    <div class="text-center" id="home-button-container">
-      <img id="home-button" src="src/home-button.png">
-    </div>
-  </div>
-
-  <div class="ajk-page" id="question-page-container">
-    <div class="clearfix text-center" id="question-container">
-      <ul class='small-block-grid-1' id="question-lists">
-        <li class="question-li">
-          <div>
-            <h4 class="question-content text-center" id='question'>1. 你买房了吗</h4>
-          </div>
-        </li>
-        <li data-role="0" class="answer-li">
-          <div class="clearfix">
-            <h4 class="answer-number">A:</h4>
-            <h4 class="text-left answer-content" id='answer-1'>没有看到符合我气质的房子</h4>
-          </div>
-        </li>
-        <li data-role="1" class="answer-li">
-          <div class="clearfix">
-            <h4 class="answer-number">B:</h4>
-            <h4 class="text-left answer-content" id='answer-2'>已买上瘾，别拦我！</h4>
-          </div>
-        </li>
-        <li data-role="2" class="answer-li">
-          <div class="clearfix">
-            <h4 class="answer-number">C:</h4>
-            <h4 class="text-left answer-content" id='answer-3'>贷款中</h4>
-          </div>
-        </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  <div class="ajk-page" id="type-page-container">
-    <div class="text-center" id="type-page-title-container">
-      <img id="type-page-title" src="src/type-page-title.png">
+  <div id="main-content">
+    <div class="ajk-page" id="blur-bg">
     </div>
 
-    <div class="text-center" id="type-page-score-container">
-      <h3 id="type-page-score">您的适居指数为 </h3>
-    </div>
-
-    <div class="text-center" id='radar-canvas-container'>
-      <canvas id="radar-canvas"></canvas>
-    </div>
-
-    <div class="text-center" id='type-page-advice-container'>
-      <h1 id="type-page-advice"></h1>
-    </div>
-
-    <div class="text-center" id="type-page-button-conatiner">
-      <button id="type-page-button">点击抽奖</button>
-    </div>
-  </div>
-
-  <div class="ajk-page" id="alreadyraffled-page-container">
-    <div class="text-center" id="alreadyraffled-page-title-container">
-      <h1>您已抽过奖了哦</h1>
-    </div>
-    <div class="text-center" id="alreadyraffled-button-container">
-      <img id="alreadyraffled-button" src="src/home-button.png">
-    </div>
-  </div>
-
-  <div class="ajk-page" id="rafflenothing-page-container">
-    <div class="text-center" id="rafflenothing-page-result-container">
-      <div class="text-center">
-        <h1>00</h1>
+    <div class="ajk-page" id="home-page-container">
+      <div class="clearfix" id="home-page-title-container">
+        <img id="home-page-title" src="src/homepage-title.png">
+      </div>
+      <div class="text-center" id="home-button-container">
+        <img id="home-button" src="src/home-button.png">
       </div>
     </div>
 
-    <div class="text-center" id="rafflenothing-page-text-container">
-      <h2 id="rafflenothing-page-text-1">非常遗憾您未中奖<br>谢谢您的参与！</h2>
-      <h2 id="rafflenothing-page-text-2">关注安居客<br>更多后续活动及丰厚大奖<br>等着你哦！</h2>
-    </div>
-
-    <div class="text-center" id="rafflenothing-page-button-conatiner">
-      <button id="rafflenothing-page-button">确定</button>
-    </div>
-  </div>
-
-  <div class="ajk-page" id="rafflething-page-container">
-    <div class="text-center" id="rafflething-page-result-container">
-      <div class="text-center">
-        <h1></h1>
+    <div class="ajk-page" id="question-page-container">
+      <div class="clearfix text-center" id="question-container">
+        <ul class='small-block-grid-1' id="question-lists">
+          <li class="question-li">
+            <div>
+              <h4 class="question-content text-center" id='question'>1. 你买房了吗</h4>
+            </div>
+          </li>
+          <li data-role="0" class="answer-li">
+            <div class="clearfix">
+              <span class="answer-number">A:</span>
+              <h4 class="text-left answer-content" id='answer-1'></h4>
+            </div>
+          </li>
+          <li data-role="1" class="answer-li">
+            <div class="clearfix">
+              <span class="answer-number">B:</span>
+              <h4 class="text-left answer-content" id='answer-2'></h4>
+            </div>
+          </li>
+          <li data-role="2" class="answer-li">
+            <div class="clearfix">
+              <span class="answer-number">C:</span>
+              <h4 class="text-left answer-content" id='answer-3'></h4>
+            </div>
+          </li>
+          
+        </ul>
       </div>
     </div>
 
-    <div class="text-center" id="rafflething-page-text-container">
-      <h1 id="rafflething-page-text-1"></h1>
-      <h4 id="rafflething-page-text-2">填写以下信息并关注安居客<br>小安会在一周内给你充话费哦！</h4>
-    </div>
+    <div class="ajk-page" id="type-page-container">
+      <div class="text-center" id="type-page-title-container">
+        <img id="type-page-title" src="src/type-page-title.png">
+      </div>
 
-    <div class="text-center clearfix" id="rafflething-page-input-container">
-      <div class="text-center clearfix">
-        <label for="rafflething-page-input">手机号码</label>
-        <input id="rafflething-page-input" type="text" name="phone-num">
-        </form>
+      <div class="text-center" id="type-page-score-container">
+        <h3 id="type-page-score">您的适居指数为 </h3>
+      </div>
+
+      <div class="text-center" id='radar-canvas-container'>
+        <canvas id="radar-canvas"></canvas>
+      </div>
+
+      <div class="text-center" id='type-page-advice-container'>
+        <h1 id="type-page-advice"></h1>
+      </div>
+
+      <div class="text-center" id="type-page-button-container">
+        <button id="type-page-button">点击抽奖</button>
       </div>
     </div>
 
-    <div class="text-center" id="rafflething-page-button-conatiner">
-      <button id="rafflething-page-button">确定</button>
+    <div class="ajk-page" id="alreadyraffled-page-container">
+      <div class="text-center" id="alreadyraffled-page-title-container">
+        <h1>您已抽过奖了哦</h1>
+      </div>
+      <div class="text-center" id="alreadyraffled-button-container">
+        <img id="alreadyraffled-button" src="src/home-button.png">
+      </div>
     </div>
-  </div>
 
-  <div class="ajk-page" id="rafflefinished-page-container">
-    <div class="text-center" id="rafflefinished-page-title-container">
-      <h1>手太慢啦<br>请关注安居客<br>下一轮活动吧</h1>
+    <div class="ajk-page" id="rafflenothing-page-container">
+      <div class="text-center" id="rafflenothing-page-result-container">
+        <div class="text-center">
+          <h1>00</h1>
+        </div>
+      </div>
+
+      <div class="text-center" id="rafflenothing-page-text-container">
+        <h2 id="rafflenothing-page-text-1">非常遗憾您未中奖<br>谢谢您的参与！</h2>
+        <h2 id="rafflenothing-page-text-2">关注安居客<br>更多后续活动及丰厚大奖<br>等着你哦！</h2>
+      </div>
+
+      <div class="text-center" id="rafflenothing-page-button-container">
+        <button id="rafflenothing-page-button">确定</button>
+      </div>
     </div>
-    <div class="text-center" id="rafflefinished-button-container">
-      <img id="rafflefinished-button" src="src/home-button.png">
+
+    <div class="ajk-page" id="rafflething-page-container">
+      <div class="text-center" id="rafflething-page-result-container">
+        <div class="text-center">
+          <h1></h1>
+        </div>
+      </div>
+
+      <div class="text-center" id="rafflething-page-text-container">
+        <h1 id="rafflething-page-text-1"></h1>
+        <h4 id="rafflething-page-text-2">填写以下信息并关注安居客<br>小安会在一周内给你充话费哦！</h4>
+      </div>
+
+      <div class="text-center clearfix" id="rafflething-page-input-container">
+        <div class="text-center clearfix">
+          <label for="rafflething-page-input">手机号码</label>
+          <input id="rafflething-page-input" type="text" name="phone-num">
+          </form>
+        </div>
+      </div>
+
+      <div class="text-center" id="rafflething-page-button-container">
+        <button id="rafflething-page-button">确定</button>
+      </div>
     </div>
-  </div>
 
-  <div class="ajk-page" id="share-page-container">
-    分享
-  </div>
+    <div class="ajk-page" id="rafflefinished-page-container">
+      <div class="text-center" id="rafflefinished-page-title-container">
+        <h1>手太慢啦<br>请关注安居客<br>下一轮活动吧</h1>
+      </div>
+      <div class="text-center" id="rafflefinished-button-container">
+        <img id="rafflefinished-button" src="src/home-button.png">
+      </div>
+    </div>
 
-  <div class="ajk-page" id="contact-page-container">
-    关注
+    <div class="ajk-page" id="share-page-container">
+      <div class="text-center" id="share-page-title-container">
+        <h1 id="share-page-title"></h1>
+      </div>
+
+      <div class="text-center" id="share-page-score-container">
+        <h4 id="share-page-score"></h4>
+        <img src="src/line.png">
+      </div>
+
+      <div class="text-center" id='share-radar-canvas-container'>
+        <canvas id="share-radar-canvas"></canvas>
+      </div>
+
+      <div class="text-center" id='share-page-advice-container'>
+        <h2 id="share-page-advice"></h2>
+      </div>
+      <h6 class="text-center">点击右上角，将结果与好友分享吧</h6>
+      <div class="text-center" id="share-page-button-container">
+        <img id="share-next-button" src="src/home-button.png">
+      </div>
+    </div>
+
+    <div class="ajk-page" id="contact-page-container">
+      <div class="text-center" id="contact-page-title-container">
+        <h2 id="contact-page-title">
+          关注安居客<br>更多精彩活动等您参与
+        </h2>
+      </div>
+
+      <div class="text-center" id="contact-page-qrcode-container">
+        <img src="src/miugo-qrcode.png">
+      </div>
+
+      <div class="text-center" id="contact-page-intro-container">
+        <h4>长按二维码，识别并<br>关注安居客账号</h4>
+      </div>
+    </div>
   </div>
 
   <script src="js/lib/jquery/jquery.js"></script>
@@ -152,6 +185,7 @@
   <script src="js/lib/Chart.js"></script>
   <script src="js/lib/foundation/foundation.min.js"></script>
 
+  <script src="js/ServiceHelper.js"></script>
   <script src="js/CookiesManager.js"></script>
   <script src="js/RaffleManager.js"></script>
   <script src="js/QuestionManager.js"></script>

@@ -1431,6 +1431,7 @@
 				ctx.fillStyle = this.titleTextColor;
 				ctx.font = this.titleFont;
 
+
 				ctx.fillText(this.title,this.x + this.xPadding, this.getLineHeight(0));
 
 				ctx.font = this.font;
@@ -1613,6 +1614,7 @@
 			if (this.display){
 				ctx.fillStyle = this.textColor;
 				ctx.font = this.font;
+
 				each(this.yLabels,function(labelString,index){
 					var yLabelCenter = this.endPoint - (yLabelGap * index),
 						linePositionY = Math.round(yLabelCenter),
@@ -1621,6 +1623,7 @@
 					ctx.textAlign = "right";
 					ctx.textBaseline = "middle";
 					if (this.showLabels){
+
 						ctx.fillText(labelString,xStart - 10,yLabelCenter);
 					}
 
@@ -1713,6 +1716,7 @@
 					ctx.font = this.font;
 					ctx.textAlign = (isRotated) ? "right" : "center";
 					ctx.textBaseline = (isRotated) ? "middle" : "top";
+
 					ctx.fillText(label, 0, 0);
 					ctx.restore();
 				},this);
@@ -1931,6 +1935,7 @@
 							ctx.textAlign = 'center';
 							ctx.textBaseline = "middle";
 							ctx.fillStyle = this.fontColor;
+
 							ctx.fillText(label, this.xCenter, yHeight);
 						}
 					}
@@ -1976,7 +1981,12 @@
 						} else {
 							ctx.textBaseline = 'top';
 						}
-
+						
+						ctx.fillStyle = "white";
+						// bug: add offset to fix bug
+						if(i == 0) {
+							pointLabelPosition.y += 3;
+						}
 						ctx.fillText(this.labels[i], pointLabelPosition.x, pointLabelPosition.y);
 					}
 				}

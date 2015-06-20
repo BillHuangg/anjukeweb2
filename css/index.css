@@ -16,8 +16,13 @@ body {
 	background-repeat:no-repeat;
 	background-position:center 0;
 	background-size:cover;
-
+	/*background-size:35% 100%;*/
 	color: white;
+	/*margin-bottom: 6%;*/
+}
+
+#main-content {
+
 }
 
 #blur-bg {
@@ -29,19 +34,26 @@ body {
 
 .ajk-page {
 	display: none;
-	position: absolute;
+	position: relative;
 	height: 100%;
-	width: 100%;
-	left: 0;
-	top: 0;
+	/*width: 100%;*/
+	/*left: 0;*/
+	/*top: 0;*/
 	margin: 0;
 	padding: 0;
+	padding-bottom: 10%;
 }
 
 /******************** home page ********************/
+#home-page-container {
+	padding-top: 30%;
+	padding-bottom: 10%;
+
+}
+
 #home-page-title-container {
-	position: relative;
-	margin-top: 30%;
+	/*position: relative;*/
+	/*margin-top: 30%;*/
 	margin-bottom: 28%;
 }
 
@@ -59,10 +71,15 @@ body {
 }
 
 /******************** question page ********************/
+#question-page-container {
+	padding-top: 18%;
+	padding-bottom: 10%;
+}
+
 #question-container {
 	border: 2px solid rgba(0, 0 , 0, 0.1);
 	border-radius: 0.8em;
-	margin: 18% 10%;
+	margin: 0% 10%;
 	padding: 1%;
 	padding-left: 0.5%;
 	padding-right: 2%;
@@ -89,7 +106,7 @@ body {
 }
 
 #question-lists .question-li {
-	padding: 24% 0;
+	padding: 20% 0;
 	background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -98,31 +115,33 @@ body {
 }
 
 #question-lists .answer-li {
-	height: 5em;
+	padding: 8%;
 }
 
 #question-lists .answer-li .answer-number{
 	float: left;
-	line-height: 3.5em;
 	font-size: 1.5em;
-	margin: 0 1em;
+	width: 15%;
 }
 
 #question-lists .answer-li .answer-content{
 	float: left;
-	margin-top: 1.7em;
-	width: 11em;
+	padding-top: 3%;
+	width: 85%;
 }
 
 .answer-content-twoLine {
 	margin-top: 0.8em !important;
 }
 
-
 /******************** type page ********************/
 
+#type-page-container {
+	padding-top: 12%;
+}
+
 #type-page-title-container {
-	margin-top: 12%;
+	/*margin-top: 12%;*/
 	margin-bottom: 2%;
 }
 
@@ -164,9 +183,12 @@ body {
 }
 
 /******************** already raffle page ********************/
+#alreadyraffled-page-container {
+	padding-top: 56%;
+}
 
 #alreadyraffled-page-title-container {
-	margin-top: 56%;
+	/*margin-top: 56%;*/
 	/*margin-bottom: 16%;*/
 }
 
@@ -175,19 +197,23 @@ body {
 
 }
 
+#alreadyraffled-button-container {
+	padding: 5%;
+}
+
 #alreadyraffled-button {
 	width: 13%;
-	position: absolute;
-	left: 50%;
-	top: 54%;
-	margin-left: -6.5%;
 }
 
 /******************** raffle nothing page ********************/
 
+#rafflenothing-page-container {
+	padding-top: 14%;
+}
+
 #rafflenothing-page-result-container {
-	margin-top: 14%;
-	margin-bottom: 8%;
+	/*margin-top: 14%;*/
+	padding-bottom: 8%;
 }
 
 #rafflenothing-page-result-container div {
@@ -216,8 +242,8 @@ body {
 	padding: 1% 0;
 }
 
-#rafflenothing-page-button-conatiner {
-	margin-top: 15%;
+#rafflenothing-page-button-container {
+	padding-top: 15%;
 }
 
 #rafflenothing-page-button {
@@ -230,8 +256,12 @@ body {
 
 /******************** raffle thing page ********************/
 
+#rafflething-page-container {
+	padding-top: 14%;
+}
+
 #rafflething-page-result-container {
-	margin-top: 14%;
+	/*margin-top: 14%;*/
 	margin-bottom: 8%;
 }
 
@@ -292,8 +322,14 @@ body {
 
 /******************** raffle finished page ********************/
 
+#rafflefinished-page-container {
+	position: relative;
+	/*height: 10%;*/
+	padding-top: 40%;
+}
+
 #rafflefinished-page-title-container {
-	margin-top: 40%;
+	/*margin-top: 40%;*/
 	/*margin-bottom: 16%;*/
 }
 
@@ -302,32 +338,94 @@ body {
 
 }
 
+#rafflefinished-button-container {
+	padding: 5%;
+}
 
 #rafflefinished-button {
 	width: 13%;
-	position: absolute;
-	left: 50%;
-	top: 54%;
-	margin-left: -6.5%;
+	/*position: absolute;*/
+	/*left: 50%;*/
+	/*top: 54%;*/
+	/*margin-left: -6.5%;*/
 }
 
 
 
+/******************** share page ********************/
 
+#share-page-container {
+	padding-top: 6%;
+}
 
+#share-page-title-container {
+	/*margin-top: 6%;*/
+}
 
+#share-page-score-container {
+	margin-bottom: 3%;
+}
 
+#share-page-score {
+	margin: 0;
+	padding: 0;
+}
 
+#share-page-score-container img {
+	width: 100%;
+	height: auto;
+	margin-top: -4%;
+}
 
+#share-radar-canvas {
+	width: 100% !important;
+	height: 100% !important;
+}
 
+#share-page-advice-container {
+	background-color: rgba(255,255,255,0.25);
+	margin-top: 2%;
+	margin-bottom: 6%;
+	padding: 2% 0;
+}
 
+#share-page-advice {
+	color: white;
+	margin: 0;
+}
 
+#share-page-button-container {
+	margin-top: 6%;
+	/*margin-bottom: 4%;*/
+}
 
+#share-next-button {
+	width: 13%;
+}
 
+/******************** contact page ********************/
 
+#contact-page-container {
+	padding-top: 15%;
+}
 
+#contact-page-title-container {
+	/*margin-top: 15%;*/
+	margin-bottom: 10%;
+}
 
+#contact-page-qrcode-container {
 
+}
+
+#contact-page-qrcode-container img {
+	width: 50%;
+}
+
+#contact-page-intro-container {
+	margin-top: 10%;
+	margin-bottom: 6%;
+}
 
 
 

@@ -45,27 +45,7 @@ var QuestionManager = {
 
         $('#answer-1').text(self.answersList[index][0]['content']);
         $('#answer-2').text(self.answersList[index][1]['content']);
-        $('#answer-3').text(self.answersList[index][2]['content']);
-
-        // set ui
-        if(self.answersList[index][0]['content'].length >= 11) {
-            $('#answer-1').addClass('answer-content-twoLine');
-        } else {
-            $('#answer-1').removeClass('answer-content-twoLine');
-        }
-
-        if(self.answersList[index][1]['content'].length >= 11) {
-            $('#answer-2').addClass('answer-content-twoLine');
-        } else {
-            $('#answer-2').removeClass('answer-content-twoLine');
-        }
-
-        if(self.answersList[index][2]['content'].length >= 11) {
-            $('#answer-3').addClass('answer-content-twoLine');
-        } else {
-            $('#answer-3').removeClass('answer-content-twoLine');
-        }
-        
+        $('#answer-3').text(self.answersList[index][2]['content']);        
     },
 
     answerButtonEvent: function(buttonIndex) {
@@ -100,6 +80,22 @@ var QuestionManager = {
             return '建议您搬回家住<br>来日方长';
         }
 
+    },
+
+    getCharacterType: function() {
+        var self = this;
+        if(self.totalScore >= 17 && self.totalScore <= 20) {
+            return '思聪富二型';
+        } else if(self.totalScore >= 13 && self.totalScore <= 16) {
+            return '一夜暴富型';
+        } else if(self.totalScore >= 9 && self.totalScore <= 12) {
+            return '自由傻乐型';
+        } else if(self.totalScore >= 5 && self.totalScore <= 8) {
+            return '崩溃边缘型';
+        } else if(self.totalScore >= 0 && self.totalScore <= 4) {
+            return '一穷二白型';
+        }
     }
+
 
 };
