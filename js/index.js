@@ -83,7 +83,7 @@ jQuery(document).ready(function ($) {
         // questions page
         $('#home-page-container').hide();
 
-        $('body').css('background-image','url(../src/bg-blur.jpg)');
+        $('body').css('background-image','url(src/bg-blur.jpg)');
 
         //change bg to blur
         // $('#blur-bg').show();
