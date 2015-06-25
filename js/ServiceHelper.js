@@ -10,13 +10,13 @@ var ServiceHelper = {
 	sendRaffleRequest : function (successCallback, errorCallback) {
 		var self = this;
 		// ?
-		var url = "";
-		//self.sendAjax(url, successCallback, errorCallback);
+		var url = "http://www.miugodigital.com:8079/anmoney";
+		self.sendAjax(url, 'get', successCallback, errorCallback);
 
 		// test 
 		// successCallback("-1");
 		// successCallback("0");
-		successCallback("50");
+		// successCallback("50");
 	},
 
 	sendResult : function(resultData, successCallback, errorCallback) {

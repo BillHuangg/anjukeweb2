@@ -35,9 +35,9 @@ var RaffleManager = {
 
 	raffleRequestSuccessCallback : function(data) {
 		var self = RaffleManager;
-
+		// {"Status":"success","Content":"10"}
 		console.log("raffle success: " + data);
-		self.raffleResultValue = data;
+		self.raffleResultValue = data['Content'];
 		// -1 -> finished
 		// 0 -> 0
 		// ...
@@ -53,8 +53,6 @@ var RaffleManager = {
 
 		// set already raffle cookies
 		CookiesManager.setFirstCookies();
-
-		
 	},
 
 	raffleRequestErrorCallback : function(data) {
