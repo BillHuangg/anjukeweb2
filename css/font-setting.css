@@ -33,7 +33,7 @@
 
 
 .font-fzxy {
-	font-family: "fzxy", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "fzxy", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	font-weight: normal;
 }
 
