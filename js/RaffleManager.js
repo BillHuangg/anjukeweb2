@@ -41,10 +41,10 @@ var RaffleManager = {
 		// -1 -> finished
 		// 0 -> 0
 		// ...
-		if(data == "-1") {
+		if(self.raffleResultValue == "-1") {
 			self.raffleFinishedCallback();
 			self.sendResult();
-		} else if(data == "0") {
+		} else if(self.raffleResultValue == "0") {
 			self.raffleNothingCallback();
 			self.sendResult();
 		} else {

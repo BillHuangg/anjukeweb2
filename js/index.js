@@ -55,7 +55,8 @@ jQuery(document).ready(function ($) {
         });
 
         $('#rafflenothing-page-button').click(function() {
-            showSharePage();
+            // showSharePage();
+            showContactPage();
         });
 
         $('#rafflething-page-button').click(function() {
