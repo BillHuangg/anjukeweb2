@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="css/lib/foundation/foundation.css">
   <link rel="stylesheet" href="css/lib/foundation/normalize.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/font-setting.css" onload="document.body.className+=' fontsloaded';">
+
 
 </head>
 <body>
@@ -32,25 +34,25 @@
         <ul class='small-block-grid-1' id="question-lists">
           <li class="question-li">
             <div>
-              <h4 class="question-content text-center" id='question'>1. 你买房了吗</h4>
+              <h4 class="question-content text-center font-fz11" id='question'>1. 你买房了吗</h4>
             </div>
           </li>
           <li data-role="0" class="answer-li">
             <div class="clearfix">
-              <span class="answer-number">A:</span>
-              <h4 class="text-left answer-content" id='answer-1'></h4>
+              <span class="answer-number font-fz11">A:</span>
+              <h4 class="text-left answer-content font-fzxy" id='answer-1'></h4>
             </div>
           </li>
           <li data-role="1" class="answer-li">
             <div class="clearfix">
-              <span class="answer-number">B:</span>
-              <h4 class="text-left answer-content" id='answer-2'></h4>
+              <span class="answer-number font-fz11">B:</span>
+              <h4 class="text-left answer-content font-fzxy" id='answer-2'></h4>
             </div>
           </li>
           <li data-role="2" class="answer-li">
             <div class="clearfix">
-              <span class="answer-number">C:</span>
-              <h4 class="text-left answer-content" id='answer-3'></h4>
+              <span class="answer-number font-fz11">C:</span>
+              <h4 class="text-left answer-content font-fzxy" id='answer-3'></h4>
             </div>
           </li>
           
@@ -64,7 +66,7 @@
       </div>
 
       <div class="text-center" id="type-page-score-container">
-        <h3 id="type-page-score">您的适居指数为 </h3>
+        <h3 class="font-fz11" id="type-page-score">您的适居指数为 </h3>
       </div>
 
       <div class="text-center" id='radar-canvas-container'>
@@ -72,17 +74,17 @@
       </div>
 
       <div class="text-center" id='type-page-advice-container'>
-        <h1 id="type-page-advice"></h1>
+        <h1 class="font-fz11" id="type-page-advice"></h1>
       </div>
 
       <div class="text-center" id="type-page-button-container">
-        <button id="type-page-button">点击抽奖</button>
+        <button  class="font-fzxy" id="type-page-button">点击抽奖</button>
       </div>
     </div>
 
     <div class="ajk-page" id="alreadyraffled-page-container">
       <div class="text-center" id="alreadyraffled-page-title-container">
-        <h1>您已抽过奖了哦</h1>
+        <h1 class="font-fz11">您已抽过奖了哦</h1>
       </div>
       <div class="text-center" id="alreadyraffled-button-container">
         <img id="alreadyraffled-button" src="src/home-button.png">
@@ -92,13 +94,13 @@
     <div class="ajk-page" id="rafflenothing-page-container">
       <div class="text-center" id="rafflenothing-page-result-container">
         <div class="text-center">
-          <h1>00</h1>
+          <h1 class="font-zzlh">00</h1>
         </div>
       </div>
 
       <div class="text-center" id="rafflenothing-page-text-container">
-        <h2 id="rafflenothing-page-text-1">非常遗憾您未中奖<br>谢谢您的参与！</h2>
-        <h2 id="rafflenothing-page-text-2">关注安居客<br>更多后续活动及丰厚大奖<br>等着你哦！</h2>
+        <h2 class="font-fzxy" id="rafflenothing-page-text-1">非常遗憾您未中奖<br>谢谢您的参与！</h2>
+        <h2 class="font-fzxy" id="rafflenothing-page-text-2">关注安居客<br>更多后续活动及丰厚大奖<br>等着你哦！</h2>
       </div>
 
       <div class="text-center" id="rafflenothing-page-button-container">
@@ -109,31 +111,31 @@
     <div class="ajk-page" id="rafflething-page-container">
       <div class="text-center" id="rafflething-page-result-container">
         <div class="text-center">
-          <h1></h1>
+          <h1 class="font-zzlh"></h1>
         </div>
       </div>
 
       <div class="text-center" id="rafflething-page-text-container">
-        <h1 id="rafflething-page-text-1"></h1>
-        <h4 id="rafflething-page-text-2">填写以下信息并关注安居客<br>小安会在一周内给你充话费哦！</h4>
+        <h1 class="font-fzxy" id="rafflething-page-text-1"></h1>
+        <h4 class="font-fzxy" id="rafflething-page-text-2">填写以下信息并关注安居客<br>小安会在一周内给你充话费哦！</h4>
       </div>
 
       <div class="text-center clearfix" id="rafflething-page-input-container">
         <div class="text-center clearfix">
-          <label for="rafflething-page-input">手机号码</label>
-          <input id="rafflething-page-input" type="text" name="phone-num">
+          <label class="font-fzxy" for="rafflething-page-input">手机号码</label>
+          <input class="font-fzxy" id="rafflething-page-input" type="text" name="phone-num">
           </form>
         </div>
       </div>
 
       <div class="text-center" id="rafflething-page-button-container">
-        <button id="rafflething-page-button">确定</button>
+        <button class="font-fzxy" id="rafflething-page-button">确定</button>
       </div>
     </div>
 
     <div class="ajk-page" id="rafflefinished-page-container">
       <div class="text-center" id="rafflefinished-page-title-container">
-        <h1>手太慢啦<br>请关注安居客<br>下一轮活动吧</h1>
+        <h1 class="font-fz11">手太慢啦<br>请关注安居客<br>下一轮活动吧</h1>
       </div>
       <div class="text-center" id="rafflefinished-button-container">
         <img id="rafflefinished-button" src="src/home-button.png">
@@ -142,11 +144,11 @@
 
     <div class="ajk-page" id="share-page-container">
       <div class="text-center" id="share-page-title-container">
-        <h1 id="share-page-title"></h1>
+        <h1 class="font-fz11" id="share-page-title"></h1>
       </div>
 
       <div class="text-center" id="share-page-score-container">
-        <h4 id="share-page-score"></h4>
+        <h4 class="font-fz11" id="share-page-score"></h4>
         <img src="src/line.png">
       </div>
 
@@ -155,9 +157,9 @@
       </div>
 
       <div class="text-center" id='share-page-advice-container'>
-        <h2 id="share-page-advice"></h2>
+        <h2 class="font-fz11" id="share-page-advice"></h2>
       </div>
-      <h6 class="text-center">点击右上角，将结果与好友分享吧</h6>
+      <h6 class="text-center font-fzxy">点击右上角，将结果与好友分享吧</h6>
       <div class="text-center" id="share-page-button-container">
         <img id="share-next-button" src="src/home-button.png">
       </div>
@@ -165,7 +167,7 @@
 
     <div class="ajk-page" id="contact-page-container">
       <div class="text-center" id="contact-page-title-container">
-        <h2 id="contact-page-title">
+        <h2 class="font-fzxy" id="contact-page-title">
           关注安居客<br>更多精彩活动等您参与
         </h2>
       </div>
@@ -175,7 +177,7 @@
       </div>
 
       <div class="text-center" id="contact-page-intro-container">
-        <h4>长按二维码，识别并<br>关注安居客账号</h4>
+        <h4 class="font-fzxy">长按二维码，识别并<br>关注安居客账号</h4>
       </div>
     </div>
   </div>

@@ -56,7 +56,13 @@ var RaffleManager = {
 	},
 
 	raffleRequestErrorCallback : function(data) {
+		var self = RaffleManager;
 		console.log("raffle error: " + data);
+
+		// if error, show finished page
+		self.raffleResultValue = "-1";
+		self.raffleFinishedCallback();
+		self.sendResult();
 	},
 
 

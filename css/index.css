@@ -2,6 +2,10 @@ html {
 	/*height: 100%;*/
 
 }
+/*h5, h6, p {
+	font-family: "STHeiti-light", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-weight: lighter;
+}*/
 
 h1, h2, h3, h4, h5, h6 {
 	color: white;
@@ -426,7 +430,6 @@ body {
 	margin-top: 10%;
 	margin-bottom: 6%;
 }
-
 
 
 

@@ -128,7 +128,7 @@ jQuery(document).ready(function ($) {
 
         var resultValue = RaffleManager.raffleResultValue;
         $('#rafflething-page-result-container div h1').text(resultValue);
-        $('#rafflething-page-text-1').text('恭喜您获得' + resultValue + '元话费');
+        $('#rafflething-page-text-1').text('恭喜您获得 ' + resultValue + ' 元话费');
 
         $('.ajk-page').hide();
         // $('#blur-bg').show();
@@ -187,7 +187,7 @@ jQuery(document).ready(function ($) {
     }
     
     function updateSharePageUI() {
-        $('#share-page-title').text('恭喜您获得' + RaffleManager.raffleResultValue + '元话费');
+        $('#share-page-title').text('恭喜您获得 ' + RaffleManager.raffleResultValue + ' 元话费');
         $('#share-page-score').html('您的适居指数为 ' + QuestionManager.totalScore);
         $('#share-page-advice').html(QuestionManager.getScoreAdvice());
 

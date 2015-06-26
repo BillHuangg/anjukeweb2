@@ -1,0 +1,48 @@
+/******************** font setting ********************/
+
+@font-face {
+    /* font-properties 方正细圆 */
+    font-family: "fzxy";
+    src:url("../src/font/fzxy.ttf") format('truetype');
+    font-weight: normal;
+   	font-style: normal;
+}
+
+@font-face {
+    /* font-properties 方正大标 */
+    font-family: "fz11";
+    src:url("../src/font/fz11.ttf") format('truetype');
+    font-weight: normal;
+   	font-style: normal;
+}
+
+@font-face {
+    /* font-properties 造字工房力黑 */
+    font-family: "zzlh";
+    src:url("../src/font/zzlh.otf") format('opentype');
+    font-weight: normal;
+   	font-style: normal;
+}
+
+/*@font-face {
+    font-family: "STHeiti-light";
+    src:url("../src/font/STHeiti-light.ttf") format('truetype');
+    font-weight: lighter;
+   	font-style: normal;
+}*/
+
+
+.fontsloaded .font-fzxy {
+	font-family: "fzxy", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: normal;
+}
+
+.fontsloaded .font-fz11 {
+	font-family: "fz11", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: normal;
+}
+
+.fontsloaded .font-zzlh {
+	font-family: "zzlh", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: normal;
+}
