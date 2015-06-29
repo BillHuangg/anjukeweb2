@@ -179,8 +179,8 @@ body {
 }
 
 #radar-canvas {
-	width: 100% !important;
-	height: 100% !important;
+	/*width: 70% !important;*/
+	/*height: 70% !important;*/
 }
 
 #type-page-advice-container {
@@ -395,8 +395,8 @@ body {
 }
 
 #share-radar-canvas {
-	width: 100% !important;
-	height: 100% !important;
+	/*width: 100% !important;*/
+	/*height: 100% !important;*/
 }
 
 #share-page-advice-container {
