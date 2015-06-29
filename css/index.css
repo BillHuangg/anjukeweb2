@@ -244,12 +244,10 @@ body {
 	margin-left: 18%;
 }
 
-#rafflenothing-page-result-container div h1{
+#rafflenothing-page-result-container div img{
 	/*float: left;*/
-	color: white;
-	font-size: 8em;
-	margin: 0;
-	padding: 0;
+	width: 100%;
+	padding: 5%;
 }
 
 #rafflenothing-page-text-container {
@@ -293,11 +291,10 @@ body {
 	margin-left: 18%;
 }
 
-#rafflething-page-result-container div h1{
-	color: white;
-	font-size: 8em;
-	margin: 0;
-	padding: 0;
+#rafflething-page-result-container div img{
+	/*float: left;*/
+	width: 100%;
+	padding: 5%;
 }
 
 #rafflething-page-input-container {

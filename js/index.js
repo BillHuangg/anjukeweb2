@@ -128,7 +128,8 @@ jQuery(document).ready(function ($) {
         console.log('raffle thing page');
 
         var resultValue = RaffleManager.raffleResultValue;
-        $('#rafflething-page-result-container div h1').text(resultValue);
+        //$('#rafflething-page-result-container div h1').text(resultValue);
+        $('#rafflething-page-result-container div img').attr('src', '../src/' + resultValue + '.png');
         $('#rafflething-page-text-1').text('恭喜您获得 ' + resultValue + ' 元话费');
 
         $('.ajk-page').hide();
