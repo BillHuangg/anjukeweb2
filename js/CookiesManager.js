@@ -7,7 +7,7 @@ var CookiesManager = {
 		var self = this;
 	
         // test
-		// self.deleteCookies();
+		self.deleteCookies();
 
         self.runRepeatCheck();
 	},
