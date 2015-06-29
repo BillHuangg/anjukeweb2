@@ -38,6 +38,7 @@ var RaffleManager = {
 		// {"Status":"success","Content":"10"}
 		console.log("raffle success: " + data);
 		self.raffleResultValue = data['Content'];
+		// self.raffleResultValue = "30";
 		// -1 -> finished
 		// 0 -> 0
 		// ...
