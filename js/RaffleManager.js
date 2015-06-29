@@ -6,7 +6,6 @@ var RaffleManager = {
 	raffleFinishedCallback : null,
 
 	userPhoneNumber : "",
-	// test
 	raffleResultValue : "",
 
 	init : function() {
