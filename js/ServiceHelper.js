@@ -25,6 +25,13 @@ var ServiceHelper = {
 		self.sendAjax(url, 'get', successCallback, errorCallback);
 	},
 
+	getWXJSInfo : function(resultData, successCallback, errorCallback) {
+		var self = this;
+
+		var url = "http://www.miugodigital.com/apps/wxjs/wxjsinfo.php";
+		self.sendAjax(url, 'get', successCallback, errorCallback);
+	},
+
 	sendAjax : function(reqURL, reqType, successCallback, errorCallback) {
 		// alert(jsonData);
 		console.log(reqURL);

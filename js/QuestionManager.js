@@ -22,7 +22,7 @@ var QuestionManager = {
 
     answersList: [
         [{'content': '没有看到符合我气质的房子', 'score': 0}, {'content': '已买上瘾，别拦我！', 'score': 2}, {'content': '贷款中...', 'score': 1}],
-        [{'content': '内环以内，“豪”无压力', 'score': 2}, {'content': '内环以外，妥妥的', 'score': 1}, {'content': '上一题我选的是A', 'score': 0}],
+        [{'content': '住在城市，“豪”无压力', 'score': 2}, {'content': '住在郊区，妥妥的', 'score': 1}, {'content': '上一题我选的是A', 'score': 0}],
         [{'content': '我怎么会帮包租婆装修', 'score': 2}, {'content': '以我的品位，朋友们都说装修前更漂亮', 'score': 1}, {'content': '正在享受甲醛带来的“视觉盛宴”', 'score': 0}],
         [{'content': '单身就是自由', 'score': 0}, {'content': '我想有个家，于是就结了', 'score': 2}, {'content': '呵呵', 'score': 1}],
         [{'content': 'Very big', 'score': 2}, {'content': '未成年', 'score': 0}, {'content': '保密', 'score': 1}],
@@ -35,6 +35,7 @@ var QuestionManager = {
 
 	init: function() {
 		var self = this;
+        
         self.currentQuestionIndex = 0;
 	},
 
@@ -73,17 +74,17 @@ var QuestionManager = {
         } else if(self.totalScore >= 13 && self.totalScore <= 16) {
             return '建议您逛逛安居客<br>商业地产等着您';
         } else if(self.totalScore >= 9 && self.totalScore <= 12) {
-            return '建议您经常使用安居客<br>看房团正等着你！';
+            return '建议您经常使用安居客<br>找到您的适居房';
         } else if(self.totalScore >= 5 && self.totalScore <= 8) {
             return '建议您搬去深山郊外<br>放松身心';
         } else if(self.totalScore >= 0 && self.totalScore <= 4) {
             return '建议您搬回家住<br>来日方长';
         }
-
     },
 
     getCharacterType: function() {
         var self = this;
+
         if(self.totalScore >= 17 && self.totalScore <= 20) {
             return '思聪富二型';
         } else if(self.totalScore >= 13 && self.totalScore <= 16) {
@@ -96,6 +97,4 @@ var QuestionManager = {
             return '一穷二白型';
         }
     }
-
-
 };
