@@ -218,7 +218,7 @@ jQuery(document).ready(function ($) {
         var tempString = '我是' + QuestionManager.getCharacterType() + '，适居指数' + QuestionManager.totalScore + '，抽到' +  RaffleManager.raffleResultValue + '元话费。你也来测测你的购房十年吧！';
         // set for share content
         settingShareInfo(tempString, tempString);
-        document.title = tempString;
+        // document.title = tempString;
     }
 
     function drawRadar(ctx) {
