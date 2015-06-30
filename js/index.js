@@ -15,8 +15,6 @@ jQuery(document).ready(function ($) {
         ServiceHelper.getWXJSInfo(null, initWXJS, null);
     }
 
-
-
     function UIInit() {
         $('#home-page-container').show();
 
@@ -216,9 +214,10 @@ jQuery(document).ready(function ($) {
         $('#share-page-title').text('恭喜您获得 ' + RaffleManager.raffleResultValue + ' 元话费');
         $('#share-page-score').html('您的适居指数为 ' + QuestionManager.totalScore);
         $('#share-page-advice').html(QuestionManager.getScoreAdvice());
-        
+
+        var tempString = '我是' + QuestionManager.getCharacterType() + '，适居指数' + QuestionManager.totalScore + '，抽到' +  RaffleManager.raffleResultValue + '元话费。你也来测测你的购房十年吧！';
         // set for share content
-        settingShareInfo('安居客－购房十年', '我是' + QuestionManager.getCharacterType() + '，适居指数' + QuestionManager.totalScore + '，抽到' +  RaffleManager.raffleResultValue + '元话费。你也来测测你的购房十年吧！');
+        settingShareInfo(tempString, tempString);
         // document.title = '我是' + QuestionManager.getCharacterType() + '，适居指数' + QuestionManager.totalScore + '，抽到' +  RaffleManager.raffleResultValue + '元话费。你也来测测你的购房十年吧！';
     }
 
@@ -296,7 +295,6 @@ jQuery(document).ready(function ($) {
             console.log(res);
         });
     }
-
 
     function settingShareInfo(title, desc) {
         wx.onMenuShareTimeline({
