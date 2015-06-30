@@ -207,12 +207,14 @@ jQuery(document).ready(function ($) {
 
     function updateTypePageUI() {
         $('#type-page-score').html('您的适居指数为 ' + QuestionManager.totalScore);
+        $('#type-page-character').html(QuestionManager.getCharacterType());
         $('#type-page-advice').html(QuestionManager.getScoreAdvice());
     }
     
     function updateSharePageUI() {
         $('#share-page-title').text('恭喜您获得 ' + RaffleManager.raffleResultValue + ' 元话费');
         $('#share-page-score').html('您的适居指数为 ' + QuestionManager.totalScore);
+        $('#share-page-character').html(QuestionManager.getCharacterType());
         $('#share-page-advice').html(QuestionManager.getScoreAdvice());
 
         var tempString = '我是' + QuestionManager.getCharacterType() + '，适居指数' + QuestionManager.totalScore + '，抽到' +  RaffleManager.raffleResultValue + '元话费。你也来测测你的购房十年吧！';
@@ -301,7 +303,7 @@ jQuery(document).ready(function ($) {
             title: title,
             link: 'http://www.miugodigital.com/apps/anjukeweb2',
             imgUrl: 'http://www.miugodigital.com/apps/anjukeweb2/src/icon.jpg',
-            
+
             success: function () { 
                 // 
             },
