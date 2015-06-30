@@ -392,6 +392,10 @@ body {
 	/*margin-top: 6%;*/
 }
 
+#share-page-title {
+	margin: 8px;
+}
+
 #share-page-score-container {
 	margin-bottom: 3%;
 }
