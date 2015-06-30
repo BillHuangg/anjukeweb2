@@ -15,69 +15,7 @@ jQuery(document).ready(function ($) {
         ServiceHelper.getWXJSInfo(null, initWXJS, null);
     }
 
-    function initWXJS(data) {
 
-        console.log(data);
-
-        wx.config({
-            debug: true,
-            appId: data['appId'],
-            timestamp: data['timestamp'],
-            nonceStr: data['nonceStr'],
-            signature: data['signature'],
-            jsApiList: [
-                'checkJsApi',
-                'onMenuShareTimeline',
-                'onMenuShareAppMessage'
-            ]
-        });
-        
-        wx.ready(function(){
-            // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
-            console.log('ready');
-            wx.onMenuShareTimeline({
-                title: '安居客－购房十年', // 分享标题
-                link: 'http://www.miugodigital.com/apps/anjukeweb2', // 分享链接
-                imgUrl: 'http://www.miugodigital.com/apps/anjukeweb2/src/icon.jpg', // 分享图标
-                success: function () { 
-                    // 
-                },
-                cancel: function () { 
-                    //
-                }
-            });
-
-            wx.onMenuShareAppMessage({
-                title: '安居客－购房十年',
-                desc: '安居客现金红包！抚慰购房十年你的心！',
-                link: 'http://www.miugodigital.com/apps/anjukeweb2',
-                imgUrl: 'http://www.miugodigital.com/apps/anjukeweb2/src/icon.jpg',
-
-                trigger: function (res) {
-                    //alert('用户点击发送给朋友');
-                },
-
-                success: function (res) {
-                    //alert('已分享');
-                },
-
-                cancel: function (res) {
-                    //alert('已取消');
-                },
-
-                fail: function (res) {
-                    //alert(JSON.stringify(res));
-                }
-            });
-            
-        });
-        
-        wx.error(function(res) {
-            // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
-            console.log(res);
-        });
-        
-    }
 
     function UIInit() {
         $('#home-page-container').show();
@@ -278,9 +216,10 @@ jQuery(document).ready(function ($) {
         $('#share-page-title').text('恭喜您获得 ' + RaffleManager.raffleResultValue + ' 元话费');
         $('#share-page-score').html('您的适居指数为 ' + QuestionManager.totalScore);
         $('#share-page-advice').html(QuestionManager.getScoreAdvice());
-
+        
         // set for share content
-        document.title = '我是' + QuestionManager.getCharacterType() + '，适居指数' + QuestionManager.totalScore + '，抽到' +  RaffleManager.raffleResultValue + '元话费。你也来测测你的购房十年吧！';
+        settingShareInfo('安居客－购房十年', '我是' + QuestionManager.getCharacterType() + '，适居指数' + QuestionManager.totalScore + '，抽到' +  RaffleManager.raffleResultValue + '元话费。你也来测测你的购房十年吧！');
+        // document.title = '我是' + QuestionManager.getCharacterType() + '，适居指数' + QuestionManager.totalScore + '，抽到' +  RaffleManager.raffleResultValue + '元话费。你也来测测你的购房十年吧！';
     }
 
     function drawRadar(ctx) {
@@ -326,5 +265,74 @@ jQuery(document).ready(function ($) {
         }
 
         var radarChart1 = new Chart(ctx).Radar(data, option);
+    }
+
+    /********************* WXJS Function *********************/
+
+    function initWXJS(data) {
+
+        wx.config({
+            debug: true,
+            appId: data['appId'],
+            timestamp: data['timestamp'],
+            nonceStr: data['nonceStr'],
+            signature: data['signature'],
+            jsApiList: [
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage'
+            ]
+        });
+        
+        wx.ready(function(){
+            // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+            console.log('ready');
+            
+            settingShareInfo('安居客－购房十年', '安居客现金红包！抚慰购房十年你的心！');
+            
+        });
+        
+        wx.error(function(res) {
+            // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+            console.log(res);
+        });
+    }
+
+
+    function settingShareInfo(title, desc) {
+        wx.onMenuShareTimeline({
+            title: title,
+            link: 'http://www.miugodigital.com/apps/anjukeweb2',
+            imgUrl: 'http://www.miugodigital.com/apps/anjukeweb2/src/icon.jpg',
+            success: function () { 
+                // 
+            },
+            cancel: function () { 
+                //
+            }
+        });
+
+        wx.onMenuShareAppMessage({
+            title: title,
+            desc: desc,
+            link: 'http://www.miugodigital.com/apps/anjukeweb2',
+            imgUrl: 'http://www.miugodigital.com/apps/anjukeweb2/src/icon.jpg',
+
+            trigger: function (res) {
+                //alert('用户点击发送给朋友');
+                console.log(res);
+            },
+
+            success: function (res) {
+                //alert('已分享');
+            },
+
+            cancel: function (res) {
+                //alert('已取消');
+            },
+
+            fail: function (res) {
+                //alert(JSON.stringify(res));
+            }
+        });
     }
 });
