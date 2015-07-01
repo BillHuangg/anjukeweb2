@@ -314,7 +314,7 @@ jQuery(document).ready(function ($) {
 
         wx.onMenuShareAppMessage({
             title: '安居客－购房十年',
-            desc: '安居客现金红包！抚慰购房十年你的心！',
+            desc: '快来和我一起测测适居指数，超高中奖概率赢话费！',
             link: 'http://www.miugodigital.com/apps/anjukeweb2',
             imgUrl: 'http://www.miugodigital.com/apps/anjukeweb2/src/icon.jpg',
 
