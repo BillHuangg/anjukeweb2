@@ -5,10 +5,6 @@ var CookiesManager = {
 
 	init: function() {
 		var self = this;
-	
-        // test
-		self.deleteCookies();
-
         self.runRepeatCheck();
 	},
 
@@ -18,9 +14,6 @@ var CookiesManager = {
         if (!self.checkCookies()) {
             self.isRaffled = false;
             console.log("no raffled flag");
-
-            // test
-            // self.setFirstCookies();
         } else {
             //
             self.isRaffled = true;
