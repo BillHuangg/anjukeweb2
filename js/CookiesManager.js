@@ -5,6 +5,9 @@ var CookiesManager = {
 
 	init: function() {
 		var self = this;
+
+        self.deleteCookies();
+        
         self.runRepeatCheck();
 	},
 
