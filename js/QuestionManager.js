@@ -23,7 +23,7 @@ var QuestionManager = {
     answersList: [
         [{'content': '没有看到符合我气质的房子', 'score': 0}, {'content': '已买上瘾，别拦我！', 'score': 2}, {'content': '贷款中...', 'score': 1}],
         [{'content': '住在城市，“豪”无压力', 'score': 2}, {'content': '住在郊区，妥妥的', 'score': 1}, {'content': '上一题我选的是A', 'score': 0}],
-        [{'content': '我怎么会帮包租婆装修', 'score': 2}, {'content': '以我的品位，朋友们都说装修前更漂亮', 'score': 1}, {'content': '正在享受甲醛带来的“视觉盛宴”', 'score': 0}],
+        [{'content': '从来没有装修过', 'score': 2}, {'content': '必须装修，否则晚上就睡不好觉', 'score': 1}, {'content': '顺其自然，可装可不装，看心情', 'score': 0}],
         [{'content': '单身就是自由', 'score': 0}, {'content': '我想有个家，于是就结了', 'score': 2}, {'content': '呵呵', 'score': 1}],
         [{'content': 'Very big', 'score': 2}, {'content': '未成年', 'score': 0}, {'content': '保密', 'score': 1}],
         [{'content': '你造嘛', 'score': 0}, {'content': '你知道吗', 'score': 1}, {'content': 'Do you know', 'score': 2}],
