@@ -278,7 +278,7 @@ jQuery(document).ready(function ($) {
     function initWXJS(data) {
 
         wx.config({
-            debug: false,
+            debug: true,
             appId: data['appId'],
             timestamp: data['timestamp'],
             nonceStr: data['nonceStr'],
