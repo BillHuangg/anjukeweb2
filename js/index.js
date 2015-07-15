@@ -1,6 +1,10 @@
 jQuery(document).ready(function ($) {
     $(document).foundation();
 
+    
+
+    UIAutoSizing();
+
     WXJSInit();
     UIInit();
     buttonEventInit();
@@ -10,6 +14,25 @@ jQuery(document).ready(function ($) {
     QuestionManager.init();
 
     /********************* Init Function *********************/
+
+    function UIAutoSizing() {
+
+        var w =window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var h =window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        // alert(w + ':' + h);
+
+        if(h >= 603) {
+            // iPhone 6
+            $('#type-page-container').css('padding-top', '8%');
+            $('#type-page-advice').css('font-size', '2em');
+
+            $('#share-page-container').css('padding-top', '8%');
+            $('#share-page-advice').css('font-size', '2em');
+        } else {
+            // iPhone 5
+            $('#question-page-container').css('padding-top', '10%');
+        }
+    }
 
     function WXJSInit() {
         ServiceHelper.getWXJSInfo(null, initWXJS, null);
@@ -278,7 +301,7 @@ jQuery(document).ready(function ($) {
     function initWXJS(data) {
 
         wx.config({
-            debug: true,
+            debug: false,
             appId: data['appId'],
             timestamp: data['timestamp'],
             nonceStr: data['nonceStr'],

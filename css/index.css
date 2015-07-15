@@ -171,7 +171,7 @@ body {
 }
 
 #type-page-score-container {
-	margin-bottom: 6%;
+	margin-bottom: 3%;
 }
 
 #type-page-score-container img {
@@ -180,7 +180,7 @@ body {
 	margin-top: -4%;
 }
 
-#type-page-score-container h3, #type-page-score-container h5{
+#type-page-score-container h4, #type-page-score-container h5{
 	margin: 0;
 	color: white;
 	margin-top: -1%;
@@ -190,6 +190,10 @@ body {
 	margin-top: -3%;
 }
 
+#radar-canvas-container {
+	margin-top: -5%;
+}
+
 #radar-canvas {
 	/*width: 70% !important;*/
 	/*height: 70% !important;*/
@@ -197,15 +201,16 @@ body {
 
 #type-page-advice-container {
 	background-color: rgba(255,255,255,0.25);
-	margin-top: 6%;
-	margin-bottom: 8%;
+	margin-top: 0%;
+	margin-bottom: 2%;
 
-	padding: 2% 0;
+	padding: 1.5% 0.5%;
 }
 
 #type-page-advice {
 	color: white;
 	margin: 0;
+	font-size: 1.5em;
 }
 
 #type-page-button {
@@ -311,7 +316,7 @@ body {
 }
 
 #rafflething-page-input-container {
-	margin-bottom: 10%;
+	margin-bottom: 2%;
 }
 
 #rafflething-page-input-container div{
@@ -411,7 +416,7 @@ body {
 	margin-top: -4%;
 }
 
-#share-page-score-container h3, #share-page-score-container h5{
+#share-page-score-container h4, #share-page-score-container h5{
 	margin: 0;
 	color: white;
 	margin-top: -1%;
@@ -421,6 +426,10 @@ body {
 	margin-top: -3%;
 }
 
+#share-radar-canvas-container {
+	margin-top: -5%;
+}
+
 #share-radar-canvas {
 	/*width: 100% !important;*/
 	/*height: 100% !important;*/
@@ -428,8 +437,8 @@ body {
 
 #share-page-advice-container {
 	background-color: rgba(255,255,255,0.25);
-	margin-top: 2%;
-	margin-bottom: 6%;
+	margin-top: 0%;
+	margin-bottom: 2%;
 	padding: 2% 0;
 }
 
@@ -439,7 +448,7 @@ body {
 }
 
 #share-page-button-container {
-	margin-top: 6%;
+	margin-top: 2%;
 	/*margin-bottom: 4%;*/
 }
 
