@@ -240,7 +240,7 @@ jQuery(document).ready(function ($) {
         $('#share-page-character').html(QuestionManager.getCharacterType());
         $('#share-page-advice').html(QuestionManager.getScoreAdvice());
 
-        var ts =  QuestionManager.totalScore + '，抽到' +  RaffleManager.raffleResultValue + '元话费';
+        var ts = '，抽到' +  RaffleManager.raffleResultValue + '元话费';
         if(RaffleManager.raffleResultValue <= 0) {
             ts = '';
         }
