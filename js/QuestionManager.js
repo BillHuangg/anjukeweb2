@@ -28,7 +28,7 @@ var QuestionManager = {
         [{'content': 'Very big', 'score': 2}, {'content': '未成年', 'score': 0}, {'content': '保密', 'score': 1}],
         [{'content': '你造嘛', 'score': 0}, {'content': '你知道吗', 'score': 1}, {'content': 'Do you know', 'score': 2}],
         [{'content': '已暂停一切娱乐活动', 'score': 1}, {'content': '蹭饭', 'score': 0}, {'content': '请朋友吃饭', 'score': 2}],
-        [{'content': '独家独栋，没有邻居', 'score': 2}, {'content': '邻居神出鬼，但我喜欢', 'score': 1}, {'content': '楼下跳广场舞的都是我邻居，跳得好我就喜欢', 'score': 0}],
+        [{'content': '独家独栋，没有邻居', 'score': 2}, {'content': '邻居神出鬼没，但我喜欢', 'score': 1}, {'content': '楼下跳广场舞的都是我邻居，跳得好我就喜欢', 'score': 0}],
         [{'content': '自驾车5分钟', 'score': 2}, {'content': '就在楼下，拿着望远镜直接可以挑菜', 'score': 0}, {'content': '我自己种菜', 'score': 1}],
         [{'content': '买！买！买！', 'score': 2}, {'content': '租！租！租！', 'score': 1}, {'content': '我就是来拿安居客的红包的', 'score': 0}]
     ],
