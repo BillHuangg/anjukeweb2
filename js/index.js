@@ -26,8 +26,8 @@ jQuery(document).ready(function ($) {
             $('#type-page-container').css('padding-top', '8%');
             $('#type-page-advice').css('font-size', '2em');
 
-            $('#share-page-container').css('padding-top', '8%');
-            $('#share-page-advice').css('font-size', '2em');
+            $('#share-page-container').css('padding-top', '16%');
+            // $('#share-page-advice').css('font-size', '2em');
         } else {
             // iPhone 5
             $('#question-page-container').css('padding-top', '10%');
@@ -108,6 +108,15 @@ jQuery(document).ready(function ($) {
             showContactPage();
         });
 
+        $('#share-button-2').click(function() {
+            // show share tip
+            showShareTipPage();
+        });
+
+        $('#contact-button-2').click(function() {
+            showContactPage();
+        });
+
         $('#sharetip-page-container').click(function() {
             hideShareTipPage();
         });
@@ -157,6 +166,10 @@ jQuery(document).ready(function ($) {
         $('.ajk-page').hide();
         // $('#blur-bg').show();
         $('#rafflenothing-page-container').show();
+
+        var tempString = '我是' + QuestionManager.getCharacterType() + '，适居指数' + QuestionManager.totalScore + '。你也来测测你的购房十年吧！';
+        // set for share content
+        settingShareInfo2('安居客－购房十年', tempString);
     }
 
 
@@ -192,7 +205,7 @@ jQuery(document).ready(function ($) {
         // $('#blur-bg').show();
         $('#share-page-container').show();
 
-        drawRadar($("#share-radar-canvas").get(0).getContext('2d'));
+        // drawRadar($("#share-radar-canvas").get(0).getContext('2d'));
     }
 
     function showContactPage() {
@@ -242,9 +255,9 @@ jQuery(document).ready(function ($) {
             $('#share-page-title').text('恭喜您获得 ' + RaffleManager.raffleResultValue + ' 元话费');
         }
 
-        $('#share-page-score').html('您的适居指数为 ' + QuestionManager.totalScore);
-        $('#share-page-character').html(QuestionManager.getCharacterType());
-        $('#share-page-advice').html(QuestionManager.getScoreAdvice());
+        // $('#share-page-score').html('您的适居指数为 ' + QuestionManager.totalScore);
+        // $('#share-page-character').html(QuestionManager.getCharacterType());
+        // $('#share-page-advice').html(QuestionManager.getScoreAdvice());
 
         var ts = '，抽到' +  RaffleManager.raffleResultValue + '元话费';
         if(RaffleManager.raffleResultValue <= 0) {

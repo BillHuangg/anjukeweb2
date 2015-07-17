@@ -279,7 +279,7 @@ body {
 }
 
 #rafflenothing-page-button-container {
-	padding-top: 15%;
+	/*padding-top: 15%;*/
 }
 
 #rafflenothing-page-button {
@@ -288,6 +288,23 @@ body {
 	font-size: 1em;
 
 	padding: 2% 8%;
+}
+
+
+#rafflenothing-page-button-container {
+	margin-top: 13%;
+	/*margin-bottom: 4%;*/
+}
+
+#rafflenothing-share-buttons {
+	
+}
+
+#rafflenothing-share-buttons button {
+	margin: 2% 8%;
+	background-color: rgba(255,255,255,0.25);
+	border-radius: 0.8em;
+	font-size: 1.2em;
 }
 
 /******************** raffle thing page ********************/
@@ -390,7 +407,7 @@ body {
 /******************** share page ********************/
 
 #share-page-container {
-	padding-top: 1%;
+	padding-top: 14%;
 }
 
 #share-page-title-container {
@@ -398,7 +415,16 @@ body {
 }
 
 #share-page-title {
-	margin: 8px;
+	font-size: 1.8em;
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+
+
+#share-page-title-container img {
+	width: 100%;
+	height: auto;
+	/*margin-top: -4%;*/
 }
 
 #share-page-score-container {
@@ -410,11 +436,6 @@ body {
 	padding: 0;
 }
 
-#share-page-score-container img {
-	width: 100%;
-	height: auto;
-	margin-top: -4%;
-}
 
 #share-page-score-container h4, #share-page-score-container h5{
 	margin: 0;
@@ -437,7 +458,7 @@ body {
 
 #share-page-advice-container {
 	background-color: rgba(255,255,255,0.25);
-	margin-top: 0%;
+	margin-top: 15%;
 	margin-bottom: 2%;
 	padding: 2% 0;
 }
@@ -445,10 +466,12 @@ body {
 #share-page-advice {
 	color: white;
 	margin: 0;
+	font-size: 1.6em;
+	padding: 2% 1%;
 }
 
 #share-page-button-container {
-	margin-top: 2%;
+	margin-top: 13%;
 	/*margin-bottom: 4%;*/
 }
 
