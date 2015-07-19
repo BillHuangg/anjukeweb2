@@ -252,7 +252,7 @@ jQuery(document).ready(function ($) {
         if(RaffleManager.raffleResultValue <= 0) {
             $('#share-page-title').text('很遗憾，您未中奖');
         } else {
-            $('#share-page-title').text('恭喜您获得 ' + RaffleManager.raffleResultValue + ' 元话费');
+            // $('#share-page-title').text('恭喜您获得 ' + RaffleManager.raffleResultValue + ' 元话费');
         }
 
         // $('#share-page-score').html('您的适居指数为 ' + QuestionManager.totalScore);
