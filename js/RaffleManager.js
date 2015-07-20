@@ -6,7 +6,7 @@ var RaffleManager = {
 	raffleFinishedCallback : null,
 
 	userPhoneNumber : "",
-	raffleResultValue : -1,
+	raffleResultValue : 1,
 
 	init : function() {
 		// cookies manger for whether raffled

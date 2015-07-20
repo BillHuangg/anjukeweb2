@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
             $('#type-page-container').css('padding-top', '8%');
             $('#type-page-advice').css('font-size', '2em');
 
-            $('#share-page-container').css('padding-top', '16%');
+            $('#share-page-container').css('padding-top', '12%');
             // $('#share-page-advice').css('font-size', '2em');
         } else {
             // iPhone 5

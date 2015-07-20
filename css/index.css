@@ -278,6 +278,13 @@ body {
 	padding: 1% 0;
 }
 
+#rafflenothing-page-text-container img {
+	width: 25%;
+	margin-top: -2%;
+	padding-right: 1%;
+}
+
+
 #rafflenothing-page-button-container {
 	/*padding-top: 15%;*/
 }
@@ -402,12 +409,10 @@ body {
 	/*margin-left: -6.5%;*/
 }
 
-
-
 /******************** share page ********************/
 
 #share-page-container {
-	padding-top: 14%;
+	padding-top: 9%;
 }
 
 #share-page-title-container {
@@ -456,14 +461,29 @@ body {
 	/*height: 100% !important;*/
 }
 
+
+
 #share-page-advice-container {
 	background-color: rgba(255,255,255,0.25);
-	margin-top: 15%;
+	/*margin-top: 15%;*/
 	margin-bottom: 2%;
-	padding: 2% 0;
+	padding: 6% 0;
 }
 
+#share-page-advice-container img {
+	width: 50%;
+}
+
+
 #share-page-advice {
+	color: white;
+	margin: 0;
+	margin-top: 5%;
+	font-size: 1.6em;
+	padding: 2% 1%;
+}
+
+#share-page-text {
 	color: white;
 	margin: 0;
 	font-size: 1.6em;
@@ -471,7 +491,7 @@ body {
 }
 
 #share-page-button-container {
-	margin-top: 13%;
+	margin-top: 8%;
 	/*margin-bottom: 4%;*/
 }
 
@@ -507,6 +527,7 @@ body {
 	margin-top: 8%;
 }
 
+
 /******************** contact page ********************/
 
 #contact-page-container {
@@ -531,6 +552,10 @@ body {
 	margin-bottom: 6%;
 }
 
+#contact-page-title img {
+	width: 30%;
+	margin-bottom: 3%;
+}
 
 
 
