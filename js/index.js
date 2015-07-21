@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
         if(h >= 603) {
             // iPhone 6
             $('#type-page-container').css('padding-top', '8%');
-            $('#type-page-advice').css('font-size', '2em');
+            // $('#type-page-advice').css('font-size', '2em');
 
             $('#share-page-container').css('padding-top', '12%');
             // $('#share-page-advice').css('font-size', '2em');
@@ -210,7 +210,7 @@ jQuery(document).ready(function ($) {
 
     function showContactPage() {
         console.log('raffle contact page');
-
+        
         $('.ajk-page').hide();
         // $('#blur-bg').show();
         $('#contact-page-container').show();

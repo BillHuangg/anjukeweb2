@@ -213,6 +213,12 @@ body {
 	font-size: 1.5em;
 }
 
+#type-page-advice-container span {
+	font-size: 30px;
+	color: white;
+	margin: 0;
+}
+
 #type-page-button {
 	background-color: rgba(255,255,255,0.25);
 	border-radius: 0.8em;
@@ -420,7 +426,7 @@ body {
 }
 
 #share-page-title {
-	font-size: 1.8em;
+	/*font-size: 1.8em;*/
 	margin-top: 2%;
 	margin-bottom: 1%;
 }

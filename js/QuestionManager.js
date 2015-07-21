@@ -70,11 +70,11 @@ var QuestionManager = {
         var self = this;
 
         if(self.totalScore >= 17 && self.totalScore <= 20) {
-            return '安居客的首页的房产<br>都拿下吧';
+            return '<span>安居客</span>的首页的房产<br>都拿下吧';
         } else if(self.totalScore >= 13 && self.totalScore <= 16) {
-            return '建议您逛逛安居客<br>商业地产等着您';
+            return '建议您逛逛<span>安居客</span><br>商业地产等着您';
         } else if(self.totalScore >= 9 && self.totalScore <= 12) {
-            return '建议您经常使用安居客<br>找到您的适居房';
+            return '建议您经常使用<span>安居客</span><br>找到您的适居房';
         } else if(self.totalScore >= 5 && self.totalScore <= 8) {
             return '建议您搬去深山郊外<br>放松身心';
         } else if(self.totalScore >= 0 && self.totalScore <= 4) {
