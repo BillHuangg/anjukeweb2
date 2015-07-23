@@ -6,7 +6,7 @@ var RaffleManager = {
 	raffleFinishedCallback : null,
 
 	userPhoneNumber : "",
-	raffleResultValue : 1,
+	raffleResultValue : -1,
 
 	init : function() {
 		// cookies manger for whether raffled
@@ -26,6 +26,7 @@ var RaffleManager = {
 		if(CookiesManager.isRaffled) {
             // console.log('already raffle');
             self.raffleAlreadyCallback();
+            self.sendResult();
         } else {
         	// send raffle request
 			ServiceHelper.sendRaffleRequest(self.raffleRequestSuccessCallback, self.raffleRequestErrorCallback);
