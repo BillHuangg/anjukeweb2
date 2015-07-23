@@ -27,7 +27,7 @@ var CookiesManager = {
     setFirstCookies : function() {
     	var self = this;
     	var cookiesValue = "raffled";
-        $.cookie(self.cookiesKey, cookiesValue);
+        $.cookie(self.cookiesKey, cookiesValue, { expires: 1000 });
     	// console.log("set flag for raffled: " + cookiesValue);
     	self.isRaffled = true;
     },
