@@ -16,11 +16,11 @@ var CookiesManager = {
     	var self = this;
         if (!self.checkCookies()) {
             self.isRaffled = false;
-            console.log("no raffled flag");
+            // console.log("no raffled flag");
         } else {
             //
             self.isRaffled = true;
-            console.log("already have raffled flag");
+            // console.log("already have raffled flag");
         }
     },
 
@@ -30,7 +30,7 @@ var CookiesManager = {
     	var self = this;
     	var cookiesValue = "raffled";
         $.cookie(self.cookiesKey, cookiesValue);
-    	console.log("set flag for raffled: " + cookiesValue);
+    	// console.log("set flag for raffled: " + cookiesValue);
     	self.isRaffled = true;
     },
 
@@ -50,7 +50,7 @@ var CookiesManager = {
     deleteCookies : function() {
     	var self = this;
     	$.cookie(self.cookiesKey, '', { expires: -1 });
-		console.log("delete cookies");
+		// console.log("delete cookies");
     }
 
 

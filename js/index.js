@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
 
         $('#type-page-button').click(function() {
             // raffle page
-            console.log('send raffle request');
+            // console.log('send raffle request');
             RaffleManager.sendRaffleRequest(showAlreadyRaffledPage, showRaffleNothingPage, showRaffleThingPage, showRaffleFinishedPage);
         });
 
@@ -125,7 +125,7 @@ jQuery(document).ready(function ($) {
     /********************* UI Page Function *********************/
 
     function showQuestionPage() {
-        console.log('questions page');
+        // console.log('questions page');
 
         // questions page
         $('#home-page-container').hide();
@@ -142,7 +142,7 @@ jQuery(document).ready(function ($) {
 
     function showTypePage() {
         // type page
-        console.log('type page');
+        // console.log('type page');
         
         updateTypePageUI();
         $('#question-page-container').hide();
@@ -155,14 +155,14 @@ jQuery(document).ready(function ($) {
 
     function showAlreadyRaffledPage() {
         // already raffled
-        console.log('already raffle page');
+        // console.log('already raffle page');
         $('#type-page-container').hide();
         $('#alreadyraffled-page-container').show();
     }
 
     function showRaffleNothingPage() {
         // raffle nothing
-        console.log('raffle nothing page');
+        // console.log('raffle nothing page');
         $('.ajk-page').hide();
         // $('#blur-bg').show();
         $('#rafflenothing-page-container').show();
@@ -175,7 +175,7 @@ jQuery(document).ready(function ($) {
 
     function showRaffleThingPage() {
         // raffle thing
-        console.log('raffle thing page');
+        // console.log('raffle thing page');
 
         var resultValue = RaffleManager.raffleResultValue;
         //$('#rafflething-page-result-container div h1').text(resultValue);
@@ -189,7 +189,7 @@ jQuery(document).ready(function ($) {
 
     function showRaffleFinishedPage() {
         // raffle finished
-        console.log('raffle finished page');
+        // console.log('raffle finished page');
 
         $('.ajk-page').hide();
         // $('#blur-bg').show();
@@ -197,7 +197,7 @@ jQuery(document).ready(function ($) {
     }
 
     function showSharePage() {
-        console.log('raffle share page');
+        // console.log('raffle share page');
 
 
         updateSharePageUI();
@@ -209,7 +209,7 @@ jQuery(document).ready(function ($) {
     }
 
     function showContactPage() {
-        console.log('raffle contact page');
+        // console.log('raffle contact page');
         
         $('.ajk-page').hide();
         // $('#blur-bg').show();
@@ -333,7 +333,7 @@ jQuery(document).ready(function ($) {
         
         wx.ready(function(){
             // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
-            console.log('ready');
+            // console.log('ready');
             
             settingShareInfo1();
             
@@ -341,7 +341,7 @@ jQuery(document).ready(function ($) {
         
         wx.error(function(res) {
             // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
-            console.log(res);
+            // console.log(res);
         });
     }
 
@@ -367,7 +367,7 @@ jQuery(document).ready(function ($) {
 
             trigger: function (res) {
                 //alert('用户点击发送给朋友');
-                console.log(res);
+                // console.log(res);
             },
 
             success: function (res) {
@@ -406,7 +406,7 @@ jQuery(document).ready(function ($) {
 
             trigger: function (res) {
                 //alert('用户点击发送给朋友');
-                console.log(res);
+                // console.log(res);
             },
 
             success: function (res) {

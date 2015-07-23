@@ -24,7 +24,7 @@ var RaffleManager = {
 		self.raffleFinishedCallback = raffleFinishedCb;
 
 		if(CookiesManager.isRaffled) {
-            console.log('already raffle');
+            // console.log('already raffle');
             self.raffleAlreadyCallback();
         } else {
         	// send raffle request
@@ -35,7 +35,7 @@ var RaffleManager = {
 	raffleRequestSuccessCallback : function(data) {
 		var self = RaffleManager;
 		// {"Status":"success","Content":"10"}
-		console.log("raffle success: " + data);
+		// console.log("raffle success: " + data);
 		self.raffleResultValue = data['Content'];
 		// self.raffleResultValue = "30";
 		// -1 -> finished
@@ -57,7 +57,7 @@ var RaffleManager = {
 
 	raffleRequestErrorCallback : function(data) {
 		var self = RaffleManager;
-		console.log("raffle error: " + data);
+		// console.log("raffle error: " + data);
 
 		// if error, show finished page
 		self.raffleResultValue = "-1";

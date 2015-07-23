@@ -34,7 +34,7 @@ var ServiceHelper = {
 
 	sendAjax : function(reqURL, reqType, successCallback, errorCallback) {
 		// alert(jsonData);
-		console.log(reqURL);
+		// console.log(reqURL);
 
 		$.ajax({
 			url: reqURL,
